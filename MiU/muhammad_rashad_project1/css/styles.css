@@ -1,7 +1,7 @@
 /*
 Rashad Muhammad
-Project 4
-VFW - 1201
+Project 1
+MiU - 1202
 */
 
 html {
@@ -9,38 +9,47 @@ html {
 }
 body {
     font-family: "Lucida Grande", Arial, serif;
-	font-size: 16px;
-    margin: 1.5px auto;
-    padding: 1.5em;
-    background-color: #60B9CE;
-    color: #015367;
-    max-width: 35em;
+	font-size: 16px;   
+    background-image: url(../images/header1.png); 
+	background-repeat: no-repeat;
+	background-color: white;
     line-height: 1.5em;
 }
+header {
+	padding: 6em 0em 0em 0em;
+}
 h1 {
-    background-color: #015367;
-    color: white;
-    font-size: 200%;
-    padding: 0.75em;
-    margin: -0.75em -0.75em 0.75em -0.75em; 
-	text-align: center;
+    color: black;
+    font-size: 175%;
+    padding: 0.75em 0.75em 0.25em 0.75em;
+    margin: -0.75em -0.75em 0.25em 0em; 
 }
 h2 {
-	color: white;
-	margin: 1em 0em -0.75em -0.25em; 
+	color: red;
+	margin: 1em 0em -0.75em -0.25em; 	
+}
+p {
+    margin: .75em 0;
+	padding: 0em .75em 0.15em 3em;
+	font-size: 16px;
+}
+nav {
+	padding: 1em .75em 0.15em 1em;
 }
 span {
 	display: block;
 }
-p {
-    margin: 1.5em 0;
-	font-size: 16px;
+form {
+	background-image: url(../images/bgColor.png);
+	color: white;
+	padding: 0em 0em 0em 0em 0emem;
+    margin: 0em 0em 0em 0em; 
 }
 legend {
 	color : white;
 }
 fieldset {
-	border: 3px dotted #04819E;
+	border: 3px dotted white;
 }
 input:focus {
 	background-color: #FFD175;
@@ -50,7 +59,7 @@ textarea {
 	height: 50px;
 }
 a {
-	color: white;
+	color: blue;
 	margin-left: 0px;
 	margin-right: 20px;
 }
@@ -58,7 +67,14 @@ a:hover {
 	color:red;
 	text-decoration: none;
 }
+
 ul {
 	list-style: none;
 	margin-top: 15px;
+	display: block;
 }
+br{
+	margin:-1em 0 0 0;
+	padding:0;
+}
+
