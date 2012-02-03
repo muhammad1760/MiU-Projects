@@ -1,0 +1,80 @@
+/*
+Rashad Muhammad
+Project 1
+MiU - 1202
+*/
+
+html {
+    background-color: white;
+}
+body {
+    font-family: "Lucida Grande", Arial, serif;
+	font-size: 16px;   
+    background-image: url(../images/header1.png); 
+	background-repeat: no-repeat;
+	background-color: white;
+    line-height: 1.5em;
+}
+header {
+	padding: 6em 0em 0em 0em;
+}
+h1 {
+    color: black;
+    font-size: 175%;
+    padding: 0.75em 0.75em 0.25em 0.75em;
+    margin: -0.75em -0.75em 0.25em 0em; 
+}
+h2 {
+	color: red;
+	margin: 1em 0em -0.75em -0.25em; 	
+}
+p {
+    margin: .75em 0;
+	padding: 0em .75em 0.15em 3em;
+	font-size: 16px;
+}
+nav {
+	padding: 1em .75em 0.15em 1em;
+}
+span {
+	display: block;
+}
+form {
+	background-image: url(../images/bgColor.png);
+	color: white;
+	padding: 0em 0em 0em 0em 0emem;
+    margin: 0em 0em 0em 0em; 
+}
+legend {
+	color : white;
+}
+fieldset {
+	border: 3px dotted white;
+}
+input:focus {
+	background-color: #FFD175;
+}
+textarea {
+	width: 250px;
+	height: 50px;
+}
+a {
+	color: blue;
+	margin-left: 0px;
+	margin-right: 20px;
+}
+a:hover { 
+	color:red;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	margin-top: 15px;
+	display: block;
+}
+br{
+	margin:-1em 0 0 0;
+	padding:0;
+}
+
