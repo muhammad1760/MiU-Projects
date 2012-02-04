@@ -24,31 +24,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 		selectLi.appendChild(makeSelect);
 	}
-	//Create Select1 field element $ populate w/ options. Below, formTagTwo is an array of all form elements
-	function makeCatsTwo(){
-		var formTagTwo = document.getElementsByTagName("form"),  		
-			selectLiTwo = $('select'),
-			makeSelectTwo = document.createElement('select');
-			makeSelectTwo.setAttribute("id", "showdays");
-		for (var i=0, j=showDays.length; i<j; i++){
-			var makeOptionTwo = document.createElement('option');
-			var optTextTwo = showDays[i];
-			makeOptionTwo.setAttribute("value", optTextTwo);
-			makeOptionTwo.innerHTML = optTextTwo;  						 
-			makeSelectTwo.appendChild(makeOptionTwo);
-		}
-		selectLiTwo.appendChild(makeSelectTwo);
-	}
-	//Variable defaults. An array is created to hold options for our drop down menu
-	var showChannels = ["Choose Channel", "HBO", "Showtime", "Cinemax", "Starz", "ABC", "NBC", "CBS", "CNN", "HLN", "MSNBC", "FOX News",  
-						"TLC", "Oxygen", "OWN", "Discovery", "History", "VH1", "MTV", "BET", "Misc"],
-		showDays = ["Choose Day", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-		daynightValue,
-		//dayofweekValue,
-		dayofweekArray = [],
-		errMsg = $('errors');
-	makeCats();
-	makeCatsTwo();
 	//Find value of selected radio button.
 	function getSelectedRadio(){
 		var radios = document.forms[0].dayornight;
@@ -58,16 +33,12 @@ window.addEventListener("DOMContentLoaded", function() {
 			}
 		}
 	}
-	function getCheckboxValue(){
+	function getCheckBoxValue(){
 		var checkbox = document.forms[0].showday;
-		for (var i=0; i<checkbox.length; i++){
-			//I knew there had to be a way to list the array items without overwriting and assigning 
-			//only one value to multiple checked items. I found the missing piece:   "\n"  on 
-			//www.blog.highub.com/javascript/javascript-core-get-form-checkbox-array-values/
+		for(i=0; i<checkbox.length; i++){
 			if (checkbox[i].checked){
-				dayofweekValue = checkbox[i].value;
-				//dayofweekArray[dayofweekValue];
-				alert(dayofweekArray[0]);
+				showdayValue = checkbox[i].value;
+				showdayArray.push(showdayValue);				
 			}
 		}
 	}
@@ -100,25 +71,23 @@ window.addEventListener("DOMContentLoaded", function() {
 		//function, and finally passed here into the storeData function.
 		else{
 			id = key;
-		}
-		
+		}		
 		//Gather up all form field values & store in an object.
 		//Object properties contain an array with the form label and input values
 		getSelectedRadio();
-		//getCheckboxValue();
+		getCheckBoxValue();
 		var item 				={};
 			item.showname		=["Name of TV Show:", $('showname').value];
 			item.startdate		=["Date Entered:", $('startdate').value];
 			item.starttime		=["Show Time:", $('starttime').value];
 			item.dayornight		=["Day/Night:", daynightValue];
 			item.channel		=["Show Channel:", $('channels').value];
-			item.showday		=["Show Day(s):", $('showdays').value];
+			item.showday		=["Show Day(s):", showdayArray];	
 			item.favorite	 	=["My Favorite Meter. On a scale of 1 to 10 this show is:", $('favrating').value];
 			item.comments		=["Comments about this show:", $('comments').value];
 		//Save data into Local Storage: Use Stringify to convert object to a string. "[object, object]"
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Show Saved!");
-		alert(item.showday);
 	}
 		function getData() {
 			toggleControls("on");
@@ -134,22 +103,22 @@ window.addEventListener("DOMContentLoaded", function() {
 			document.body.appendChild(makeDiv);
 			$('items').style.display = "block";
 			for (var i=0, j=localStorage.length; i<j; i++){
-				var makeli= document.createElement('li');
-				var linksLi = document.createElement('li');
+				var makeli= document.createElement('li');	
+				var linksLi = document.createElement('li');	//not in code
 				makeList.appendChild(makeli);
 				var key = localStorage.key(i);
 				var value = localStorage.getItem(key);
 				//Convert string from localStorage value to an object using JSON.parse() 
 				var obj = JSON.parse(value);
 				var makeSubList = document.createElement('ul');
-				makeli.appendChild(makeSubList);
-				getImage(obj.channel[1], makeSubList);
+				makeli.appendChild(makeSubList);				
+				getImage(obj.channel[1], makeSubList);  
 				for (var t in obj){
 					var makeSubli = document.createElement('li');
 					makeSubList.appendChild(makeSubli);
 					var optsubText = obj[t][0]+" "+ obj[t][1];
 					makeSubli.innerHTML = optsubText;
-					makeSubList.appendChild(linksLi);
+					makeSubList.appendChild(linksLi);  
 				}
 				makeItemLinks(localStorage.key(i), linksLi);  //Creates edit & delete links for each item in local storage.
 			}
@@ -161,8 +130,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			var newImage = document.createElement('img');
 			var setSrc = newImage.setAttribute("src", "images/"+ catName +".png");
 			imageLi.appendChild(newImage);
-		}
-		
+		}		
 		//Auto populate Local Storage using JSON object
 		function autoFillData(){
 			//JSON Object data is coming from json.js which is loaded from additem.html
@@ -171,8 +139,7 @@ window.addEventListener("DOMContentLoaded", function() {
 				var id = Math.floor(Math.random()*10000001);
 				localStorage.setItem(id, JSON.stringify(json[n]));
 			}
-		}
-		
+		}		
 		//Creates edit and delete links when displayed
 		function makeItemLinks(key, linksLi) {
 			//Adds an edit single item link.
@@ -214,11 +181,10 @@ window.addEventListener("DOMContentLoaded", function() {
 				}
 			}
 			$('channels').value	= item.channel[1];
-			$('showdays').value	= item.showday[1];
-			/*var checkbox = document.forms[0].showday;
-			for(var i=0; i<checkbox.length; i++){
+			var checkbox = document.forms[0].showday;
+			for(i=0; i<checkbox.length; i++){
 				var checkBoxIndex = checkbox[i];
-				for(var ii=0; ii < item.showday[1].length; ii++){
+				for(ii=0; ii < item.showday[1].length; ii++){
 					var showArrayIndex = item.showday[1][ii];
 					if(checkBoxIndex.value == "Sunday" && showArrayIndex == "Sunday"){
 						checkBoxIndex.setAttribute("checked", "checked");
@@ -242,43 +208,22 @@ window.addEventListener("DOMContentLoaded", function() {
 						checkBoxIndex.setAttribute("checked", "checked");
 					}
 				}
-				
-				if (checkbx[i].value === "Sunday" && item.showday[1] === "Sunday"){					
-					checkbx[i].setAttribute("checked", "checked");
-				}
-				if (checkbx[i].value === "Monday" && item.showday[1] === "Monday"){					
-					checkbx[i].setAttribute("checked", "checked");
-				}
-				if (checkbx[i].value === "Tuesday" && item.showday[1] === "Tuesday"){					
-					checkbx[i].setAttribute("checked", "checked");
-				}
-				if (checkbx[i].value === "Wednesday" && item.showday[1] === "Wednesday"){					
-					checkbx[i].setAttribute("checked", "checked");
-				}
-				if (checkbx[i].value === "Thursday" && item.showday[1] === "Thursday"){					
-					checkbx[i].setAttribute("checked", "checked");
-				}
-				if (checkbx[i].value === "Friday" && item.showday[1] === "Friday"){					
-					checkbx[i].setAttribute("checked", "checked");
-				}
-				if (checkbx[i].value === "Saturday" && item.showday[1] === "Saturday"){					
-					checkbx[i].setAttribute("checked", "checked"); 
-				
-			}	*/		
+			}
 			$('favrating').value= item.favorite[1];
 			$('comments').value	= item.comments[1];
 			
 			//Remove the initial listener from the input "save contact" button.
 			save.removeEventListener("click", storeData);
+			
 			//Change Submit button value to "Edit" button
 			$('submit').value = "Edit Show";
 			var editSubmit = $('submit');
+			
 			//Save the key value established in this function as a property of the editSubmit event
 			//so I can use that value when I save the data I edited.
 			editSubmit.addEventListener("click", validate);
 			editSubmit.key = this.key;			
-		}
-		
+		}		
 		function deleteItem(){
 			var ask = confirm("Are you sure you want to delete this show?");
 			if(ask){
@@ -289,8 +234,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			else{
 				alert("Show was not deleted!");
 			}
-		}
-		
+		}		
 		function clearLocal(){
 			if (localStorage.length === 0){
 				alert("No data in storage.");
@@ -308,7 +252,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			var getShowName = $('showname');
 			var getStartTime = $('starttime');
 			var getChannel = $('channels');
-			var getDay = $('showdays');
+			//change back if checkboxes don't work!  var getDay = $('showdays');
 			//var getDayOfWeek = showday;
 			
 			//Reset Error Messages
@@ -316,7 +260,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			getShowName.style.border = "none";
 			getStartTime.style.border = "none";
 			getChannel.style.border = "none";
-			getDay.style.border = "none";
+			//change back! getDay.style.border = "none";
 						
 			//Get Error Messages
 			var msgArray = [];
@@ -342,12 +286,13 @@ window.addEventListener("DOMContentLoaded", function() {
 				msgArray.push(showChannelError);
 			}
 			//Show Day Validation
+			/*Change back if checkboxes don't work
 			if(getDay.value === "Choose Day") {
 				var showDayError = "Please choose day of show.";
 				getDay.style.border = "1px solid black";
 				msgArray.push(showDayError);
 			}
-			
+			*/
 			//If there are errors, display them on the screen.
 			if(msgArray.length >= 1){
 				for(var i=0, j=msgArray.length; i<j; i++){
@@ -364,6 +309,16 @@ window.addEventListener("DOMContentLoaded", function() {
 				storeData(this.key);
 			}
 		}
+	//Variable defaults. An array is created to hold options for our drop down menu
+	var showChannels = ["Choose Channel", "HBO", "Showtime", "Cinemax", "Starz", "ABC", "NBC", "CBS", "CNN", "HLN", "MSNBC", "FOX News",  
+						"TLC", "Oxygen", "OWN", "Discovery", "History", "VH1", "MTV", "BET", "Misc"],
+		//change back if checkboxes don't work! showDays = ["Choose Day", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+		daynightValue,
+		showdayValue,
+		showdayArray = [],
+		errMsg = $('errors');
+	makeCats();
+		
 	//Set Link and Submit Click Events. Some event listeners to run functions on the page.
 	var displayData = $('displayData');
 	displayData.addEventListener("click", getData);
