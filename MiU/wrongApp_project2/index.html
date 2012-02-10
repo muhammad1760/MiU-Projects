@@ -1,0 +1,434 @@
+<!doctype html>  
+<!--Rashad Muhammad, Project 2, MiU - 1202 -->
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Must See TV!</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<link rel="stylesheet" href="css/style.css />
+		
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	<!-- This is the splash page for Wrong App -->
+	<!-- New Page for Thumbnail Grid  -->
+	<div data-role="page" id="grid">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center" /></h1>
+			<div>
+				<h2><a href="additem.html" data-ajax="false">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li> 
+					
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/goodApp_project2/index.html" data-icon="check">Good App</a></li> 
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/wrongApp_project2/index.html" data-icon="alert">Wrong App</a></li> 
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" id="content">
+			<p>Click on any day to browse listings.</p>
+			<div class="ui-grid-b">
+				<div class="ui-block-a"><a href="#home"><img src="images/sunday.png" /></a></div>
+				<div class="ui-block-b"><a href="#home"><img src="images/monday.png" /></a></div>
+				<div class="ui-block-c"><a href="#home"><img src="images/tuesday.png" /></a></div>				
+			</div>
+			<div class="ui-grid-b">
+				<div class="ui-block-a"><a href="#home"><img src="images/wednesday.png" /></a></div>
+				<div class="ui-block-b"><a href="#home"><img src="images/thursday.png" /></a></div>
+				<div class="ui-block-c"><a href="#home"><img src="images/friday.png" /></a></div>								
+			</div>
+			<div>
+				<p><a href="#home"><center><img src="images/saturday.png" /></center></a></p>
+			</div>
+		</div>
+		<div data-role="footer" data-id="home">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>
+	
+	
+	
+	<!-- This is the first/home page or index.html -->
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center" /></h1>
+			<div>
+				<h2><a href="additem.html" data-ajax="false" data-transition="slide">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li> 
+					
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/goodApp_project2/index.html" data-icon="check">Good App</a></li> 
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/wrongApp_project2/index.html" data-icon="alert">Wrong App</a></li> 
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c" id="content">
+			<p>Browse By Day:</p>		
+			<div data-role="collapsible-set" data-theme="a" data-content-theme="c">	
+				<div data-role="collapsible">	
+					<h3>Sunday</h3>
+					<p>All listings for Sunday:</p>
+				
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>35 and Ticking</h3>
+						<p>Show Details Coming Soon</p>	
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>America's Funniest Home Videos</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Real Housewives of Atlanta</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Steve Harvey: Still Trippin'</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>The Walking Dead</h3>	
+						<p>Show Details Coming Soon<p>
+					</div>	
+				</div>
+			</div>
+			<!-- This is the list inlay for Monday -->			
+			<div data-role="collapsible-set" data-theme="a" data-content-theme="c">	
+				<div data-role="collapsible">	
+					<h3>Monday</h3>
+					<p>All listings for Monday:</p>
+				
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>30 Rock</h3>
+						<p>Show Details Coming Soon</p>	
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Attack of the Show</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Cold Case</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>CSI: Miami</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>OutFront</h3>	
+						<p>Show Details Coming Soon<p>
+					</div>	
+				</div>
+			</div>
+			<!-- This is the list inlay for Tuesday -->			
+			<div data-role="collapsible-set" data-theme="a" data-content-theme="c">	
+				<div data-role="collapsible">	
+					<h3>Tuesday</h3>
+					<p>All listings for Tuesday:</p>
+				
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Auction Hunters</h3>
+						<p>Show Details Coming Soon</p>	
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>The Rite</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Criminal Minds</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>The Rosie Show</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>The Village</h3>	
+						<p>Show Details Coming Soon<p>
+					</div>	
+				</div>
+			</div>
+			<!-- This is the list inlay for Wednesday -->			
+			<div data-role="collapsible-set" data-theme="a" data-content-theme="c">	
+				<div data-role="collapsible">	
+					<h3>Wednesday</h3>
+					<p>All listings for Wednesday:</p>
+				
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>American Idol</h3>
+						<p>Show Details Coming Soon</p>	
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Burn Notice</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Mob Money: An American Greed Special</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Modern Family</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Revenge</h3>	
+						<p>Show Details Coming Soon<p>
+					</div>	
+				</div>
+			</div>
+			<!-- This is the list inlay for Thursday -->			
+			<div data-role="collapsible-set" data-theme="a" data-content-theme="c">	
+				<div data-role="collapsible">	
+					<h3>Thursday</h3>
+					<p>All listings for Thursday:</p>
+				
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>2012</h3>
+						<p>Show Details Coming Soon</p>	
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>American Idol</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Coming To America</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Swamp People</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Wipeout</h3>	
+						<p>Show Details Coming Soon<p>
+					</div>	
+				</div>
+			</div>			
+			<!-- This is the list inlay for Friday -->			
+			<div data-role="collapsible-set" data-theme="a" data-content-theme="c">	
+				<div data-role="collapsible">	
+					<h3>Friday</h3>
+					<p>All listings for Friday:</p>
+				
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Real Time With Bill Maher</h3>
+						<p>Show Details Coming Soon</p>	
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Shark Tank</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Spartacus</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>The O'Reilly Factor</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Undercover Boss</h3>	
+						<p>Show Details Coming Soon<p>
+					</div>	
+				</div>
+			</div>
+			<!-- This is the list inlay for Saturday -->			
+			<div data-role="collapsible-set" data-theme="a" data-content-theme="c">	
+				<div data-role="collapsible">	
+					<h3>Saturday</h3>
+					<p>All listings for Saturday:</p>
+				
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Get Him to the Greek</h3>
+						<p>Show Details Coming Soon</p>	
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Luck</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>Person of Interest</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>The Firm</h3>
+						<p>Show Details Coming Soon</p>
+					</div>
+					<br />
+					<div data-role="collapsible" data-theme="b" data-content-theme="b">
+						<h3>The Outlaw Josey Wales</h3>	
+						<p>Show Details Coming Soon<p>
+					</div>	
+				</div>
+			</div>
+			<!-- This is the link (and list inlay) to the News Stream -->
+			<div data-role="collapsible" data-theme="b" data-content-theme="b">
+				<h3>News Stream</h3>	
+				<p><a href="#stream" data-icon="stream">Recent additions to your TV guide.</a><p>
+			</div>	
+			<div data-role="fieldcontain">
+				<label for="search">Search Your Listings:</label><input type="search" id="search" name="search" />
+				<input type="submit" value="Search Now" />		
+			</div>
+		</div>						
+		<div data-role="footer" data-id="home">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>
+	
+	
+	<!-- New Page for News Stream  -->
+	<div data-role="page" id="stream">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center" /></h1>
+			<div>
+				<h2><a href="additem.html" data-ajax="false" data-transition="slide">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li> 
+					
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/goodApp_project2/index.html" data-icon="check">Good App</a></li> 
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/wrongApp_project2/index.html" data-icon="alert">Wrong App</a></li> 
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c" id="content">
+			<h3>Date Entered: 2012-02-05</h3>
+			<ul>
+				<li>Name of Show: What Would You Do?</li>
+				<li>Show Time: 19:00 PM</li>
+				<li>Show Day(s): Friday</li>
+				<li>Show Channel: ABC</li>
+				<li>My Favorite Meter: 9</li>
+				<li>Comments about this show: I would hate to be on that show!</li>
+			</ul>
+			<hr>
+			<h3>Date Entered: 2012-02-04</h3>
+			<ul>
+				<li>Name of Show: Cheaters</li>
+				<li>Show Time: 21:00 PM</li>
+				<li>Show Day(s): Tuesday</li>
+				<li>Show Channel: Misc</li>
+				<li>My Favorite Meter: 8</li>
+				<li>Comments about this show: Watch out fellas!</li>
+			</ul>
+			<hr>
+			<h3>Date Entered: 2012-02-01</h3>
+			<ul>
+				<li>Name of Show: The Vampire Diaries</li>
+				<li>Show Time: 19:00 PM</li>
+				<li>Show Day(s): Thursday</li>
+				<li>Show Channel: Misc</li>
+				<li>My Favorite Meter: 10</li>
+				<li>Comments about this show: Vampires Rock!</li>				
+				</ul>
+			<hr>
+			<h3>Date Entered: 2012-01-27</h3>
+			<ul>
+				<li>Name of Show: NCIS</li>
+				<li>Show Time: 20:00 PM</li>
+				<li>Show Day(s): Monday</li>
+				<li>Show Channel: CBS</li>
+				<li>My Favorite Meter: 6</li>
+				<li>Comments about this show: Decent action.</li>
+			</ul>
+			<hr>
+			<h3>Date Entered: 2012-01-25</h3>
+			<ul>
+				<li>Name of Show: Haters</li>
+				<li>Show Time: 05:30 AM</li>
+				<li>Show Day(s): Wednesday</li>
+				<li>Show Channel: HBO</li>
+				<li>My Favorite Meter: 9</li>
+				<li>Comments about this show: Love the hate!</li>
+			</ul>				
+		</div>
+		<div data-role="footer" data-id="home">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>
+	
+	<!-- New Page for Under Construction  -->
+	<div data-role="page" id="construction">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTV.png" id="hdrImg" align="center"/></h1>
+			<div>
+				<h2><a href="additem.html" data-ajax="false" data-transition="slide">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>					
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c" id="content">
+			<h3>TV Show Details is coming soon!</h3>					
+		</div>
+		<div data-role="footer" data-id="home">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
