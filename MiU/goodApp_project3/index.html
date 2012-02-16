@@ -1,0 +1,702 @@
+<!doctype html>  
+<!--Rashad Muhammad, Project 3, Good App, MiU - 1202 -->
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Must See TV!</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />  
+	<link rel="stylesheet" href="css/style.css" />
+		
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	<!-- This is the first/home page or index.html -->
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center" /></h1>
+			<div>
+				<h2><a href="#additem" data-ajax="false">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>					
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/goodApp_project3/index.html" data-icon="check">Good App</a></li>
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/wrongApp_project3/index.html" data-icon="alert">Wrong App</a></li> 
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c" id="content">
+			<p>Browse By Day:</p>
+			<ul data-role="listview" data-inset="true">				
+				<li>
+					<a href="#sundayLi">
+						<img src="images/sunday.png" />
+						<h3>Synch it Sunday...</h3>
+						<p>See TV listing of shows for Sunday.</p>
+					</a>
+				</li>				
+				<li>
+					<a href="#mondayLi">
+						<img src="images/monday.png" />
+						<h3>Can't miss it Monday...</h3>
+						<p>See TV listing of shows for Monday.</p>
+					</a>
+				</li>				
+				<li>
+					<a href="#tuesdayLi">
+						<img src="images/tuesday.png" />
+						<h3>TiVo it Tuesday...</h3>
+						<p>See TV listing of shows for Tuesday.</p>						
+					</a>
+				</li>
+				<li>
+					<a href="#wednesdayLi">
+						<img src="images/wednesday.png" />
+						<h3>Watch it Wednesday...</h3>
+						<p>See TV listing of shows for Wednesday.</p>						
+					</a>
+				</li>
+				<li>
+					<a href="#thursdayLi">
+						<img src="images/thursday.png" />
+						<h3>It's on Thursday...</h3>
+						<p>See TV listing of shows for Thursday.</p>						
+					</a>
+				</li>
+				<li>
+					<a href="#fridayLi">
+						<img src="images/friday.png" />
+						<h3>Fire it up Friday...</h3>
+						<p>See TV listing of shows for Friday.</p>						
+					</a>
+				</li>
+				<li>
+					<a href="#saturdayLi">
+						<img src="images/saturday.png" />
+						<h3>See it Saturday...</h3>
+						<p>See TV listing of shows for Saturday.</p>						
+					</a>
+				</li>									
+			</ul>
+			<div data-role="fieldcontain">
+				<label for="search">Search Your Listings:</label><input type="search" id="search" name="search" />
+				<input type="submit" value="Search Now" />		
+			</div>
+		</div>			
+		<div data-role="footer" data-id="home" data-position="fixed">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>
+	
+	<!-- New Page for Sunday list items -->
+	<div data-role="page" id="sundayLi" data-title="Sunday's Listing">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center" /></h1>
+			<div>
+				<h2><a href="#additem" data-ajax="false">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li> 					
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/goodApp_project3/index.html" data-icon="check">Good App</a></li>
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/wrongApp_project3/index.html" data-icon="alert">Wrong App</a></li> 
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c" id="content">
+			<p>Shows for Sunday:</p>
+			<ul data-role="listview" data-inset="true" data-filter="true">				
+				<li>
+					<a href="#construction">
+						<h3>35 and Ticking</h3>
+					</a>
+				</li>	
+				<li>
+					<a href="#construction">
+						<h3>America's Funniest Home Videos</h3>						
+					</a>
+				</li>								
+				<li>
+					<a href="#construction">
+						<h3>Real Housewives of Atlanta</h3>											
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>Steve Harvey: Still Trippin'</h3>												
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>The Walking Dead</h3>												
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div data-role="footer" data-id="home" data-position="fixed">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>	
+	
+	<!-- New Page for Monday list items -->
+	<div data-role="page" id="mondayLi" data-title="Monday's Listing">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center"/></h1>
+			<div>
+				<h2><a href="#additem" data-ajax="false">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li> 					
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/goodApp_project3/index.html" data-icon="check">Good App</a></li>
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/wrongApp_project3/index.html" data-icon="alert">Wrong App</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c" id="content">
+			<p>Shows for Monday:</p>
+			<ul data-role="listview" data-inset="true" data-filter="true">				
+				<li>
+					<a href="#construction">
+						<h3>30 Rock</h3>												
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>Attack of the Show</h3>												
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>Cold Case</h3>						
+					</a>
+				</li>				
+				<li>
+					<a href="#construction">
+						<h3>CSI: Miami</h3>
+					</a>
+				</li>				
+				<li>
+					<a href="#construction">
+						<h3>OutFront</h3>											
+					</a>
+				</li>			
+			</ul>
+		</div>
+		<div data-role="footer" data-id="home" data-position="fixed">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>
+	
+	<!-- New Page for Tuesday list items -->
+	<div data-role="page" id="tuesdayLi" data-title="Tuesday's Listing">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center"/></h1>
+			<div>
+				<h2><a href="#additem" data-ajax="false">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li> 					
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/goodApp_project3/index.html" data-icon="check">Good App</a></li>
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/wrongApp_project3/index.html" data-icon="alert">Wrong App</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c" id="content">
+			<p>Shows for Tuesday:</p>
+			<ul data-role="listview" data-inset="true" data-filter="true">				
+				<li>
+					<a href="#construction">
+						<h3>Auction Hunters</h3>												
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>The Rite</h3>												
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>Criminal Minds</h3>						
+					</a>
+				</li>				
+				<li>
+					<a href="#construction">
+						<h3>The Rosie Show</h3>
+					</a>
+				</li>				
+				<li>
+					<a href="#construction">
+						<h3>The Village</h3>											
+					</a>
+				</li>								
+			</ul>
+		</div>
+		<div data-role="footer" data-id="home" data-position="fixed">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>
+	
+	<!-- New Page for Wednesday list items -->
+	<div data-role="page" id="wednesdayLi" data-title="Wednesday's Listing">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center"/></h1>
+			<div>
+				<h2><a href="#additem" data-ajax="false">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li> 
+					
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/goodApp_project3/index.html" data-icon="check">Good App</a></li>
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/wrongApp_project3/index.html" data-icon="alert">Wrong App</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c" id="content">
+			<p>Shows for Wednesday:</p>
+			<ul data-role="listview" data-inset="true" data-filter="true">				
+				<li>
+					<a href="#construction">
+						<h3>American Idol</h3>						
+					</a>
+				</li>									
+				<li>
+					<a href="#construction">
+						<h3>Burn Notice</h3>											
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>Mob Money: An American Greed Special</h3>												
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>Modern Family</h3>												
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>Revenge</h3>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div data-role="footer" data-id="home" data-position="fixed">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>
+	
+	<!-- New Page for Thursday list items -->
+	<div data-role="page" id="thursdayLi" data-title="Thursday's Listing">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center"/></h1>
+			<div>
+				<h2><a href="#additem" data-ajax="false">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>					
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/goodApp_project3/index.html" data-icon="check">Good App</a></li>
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/wrongApp_project3/index.html" data-icon="alert">Wrong App</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c" id="content">
+			<p>Shows for Thursday:</p>
+			<ul data-role="listview" data-inset="true" data-filter="true">				
+				<li>
+					<a href="#construction">
+						<h3>2012</h3>											
+					</a>
+				</li>						
+				<li>
+					<a href="#construction">
+						<h3>American Idol</h3>
+					</a>
+				</li>					
+				<li>
+					<a href="#construction">
+						<h3>Real Time With Bill Maher</h3>												
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>Swamp People</h3>												
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>Wipeout</h3>						
+					</a>
+				</li>		
+			</ul>
+		</div>
+		<div data-role="footer" data-id="home" data-position="fixed">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>
+	
+	<!-- New Page for Friday list items -->
+	<div data-role="page" id="fridayLi" data-title="Friday's Listing">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center"/></h1>
+			<div>
+				<h2><a href="#additem" data-ajax="false">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li> 					
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/goodApp_project3/index.html" data-icon="check">Good App</a></li>
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/wrongApp_project3/index.html" data-icon="alert">Wrong App</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c" id="content">
+			<p>Shows for Friday:</p>
+			<ul data-role="listview" data-inset="true" data-filter="true">				
+				<li>
+					<a href="#construction">
+						<h3>Real Time With Bill Maher</h3>												
+					</a>
+				</li>						
+				<li>
+					<a href="#construction">
+						<h3>Shark Tank</h3>
+					</a>
+				</li>	
+				<li>
+					<a href="#construction">
+						<h3>Spartacus</h3>						
+					</a>
+				</li>							
+				<li>
+					<a href="#construction">
+						<h3>The O'Reilly Factor</h3>												
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>Undercover Boss</h3>											
+					</a>
+				</li>	
+			</ul>
+		</div>
+		<div data-role="footer" data-id="home" data-position="fixed">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>
+	
+	<!-- New Page for Saturday list items -->
+	<div data-role="page" id="saturdayLi" data-title="Saturday's Listing">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center"/></h1>
+			<div>
+				<h2><a href="#additem" data-ajax="false">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li> 					
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/goodApp_project3/index.html" data-icon="check">Good App</a></li>
+					<li><a href="http://muhammad1760.github.com/MiU-Projects/MiU/wrongApp_project3/index.html" data-icon="alert">Wrong App</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c" id="content">
+			<p>Shows for Saturday:</p>
+			<ul data-role="listview" data-inset="true" data-filter="true">				
+				<li>
+					<a href="#construction">
+						<h3>Get Him to the Greek</h3>												
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>Luck</h3>											
+					</a>
+				</li>
+				<li>
+					<a href="#construction">
+						<h3>Person of Interest</h3>						
+					</a>
+				</li>				
+				<li>
+					<a href="#construction">
+						<h3>The Firm</h3>
+					</a>
+				</li>					
+				<li>
+					<a href="#construction">
+						<h3>The Outlaw Josey Wales</h3>												
+					</a>
+				</li>				
+			</ul>
+		</div>
+		<div data-role="footer" data-id="home" data-position="fixed">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>
+	
+	<!-- New Page for addItem -->
+	<div data-role="page" id="additem" data-add-back-btn="true" data-title="Add A Show!">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center"/></h1>			
+			<div>
+				<h2><a href="#additem" data-ajax="false">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>					
+					<li><a href="#construction" data-icon="search">View Storage</a></li>
+					<li><a href="#construction" data-icon="minus">Clear Storage</a></li>
+				</ul>
+			</div>
+		</div>		
+		<div data-role="content" data-theme="a" id="addItemContent">
+			<form action="" method="post" id="showsForm">
+				<span>Required Fields <font color="#FFD175">*</font></span>
+				<div data-role="fieldcontain">									
+					<label for="showname">TV Show:<font color="#FFD175">*</font></label>
+					<input type="text" name="showname" id="showname" class="required" />
+					<small>Example: Dancing with the Stars</small>
+				</div>				
+				<div data-role="fieldcontain">
+					<label for="showdate">Entry Date:<font color="#FFD175">*</font></label>
+					<input type="text" name="showdate" id="showdate" class="required date" />
+					<small>Example: 12/15/2012</small>
+				<!-- Could not get this code to works as "required" although I like the buttons better
+					 Maybe next week...
+					<fieldset data-role="controlgroup" data-type="horizontal">
+						<legend>Entry Date:</legend>
+						<label for="select-choice-month">Month</label>
+						<select name="select-choice-month" id="select-choice-month" data-native-menu="false">
+							<option>Month</option>
+							<option value="jan">Jan</option>
+							<option value="feb">Feb</option>
+							<option value="mar">Mar</option>
+							<option value="apr">Apr</option>
+							<option value="may">May</option>
+							<option value="jun">Jun</option>
+							<option value="jul">Jul</option>
+							<option value="aug">Aug</option>
+							<option value="sep">Sep</option>
+							<option value="oct">Oct</option>
+							<option value="nov">Nov</option>
+							<option value="dec">Dec</option>
+						</select>
+						<label for="select-choice-day">Day</label>
+						<select name="select-choice-day" id="select-choice-day" data-native-menu="false">
+							<option>Day</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>							
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>							
+						</select>
+						<label for="select-choice-year">Year</label>
+						<select name="select-choice-year" id="select-choice-year" data-native-menu="false">
+							<option>Year</option>
+							<option value="2012">2012</option>
+							<option value="2011">2011</option>
+							<option value="2010">2010</option>							
+						</select>
+					</fieldset>
+					-->
+				</div>
+				<label for="starttime">Show time:<font color="#FFD175">*</font></label>
+				<input type="text" name="starttime" id="starttime" value="" class="required time" />
+				<small>Use 24 hour format - NN:NN - Example: 09:30</small>				
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">	
+					<legend>Day or Night</legend>  
+						<input type="radio" value="AM" id="am" name="dayornight" /><label for="am">AM</label> 
+						<input type="radio" value="PM" id="pm" name="dayornight" checked /><label for="pm">PM</label>
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>Show Channel:<font color="#FFD175">*</font></legend>
+						<label for="channels">Choose a Channel</label>
+						<select name="channels" id="channels" data-native-menu="false" class="required">
+							<option data-placeholder="true" value>Choose A Channel</option>
+							<optgroup label="Basic Cable">
+								<option value="ABC">ABC</option>
+								<option value="CBS">CBS</option>
+								<option value="NBC">NBC</option>
+							</optgroup>
+							<optgroup label="News">
+								<option value="CNN">CNN</option>
+								<option value="FOX News">FOX News</option>
+								<option value="HLN">HLN</option>
+								<option value="MSNBC">MSNBC</option>
+							</optgroup>
+							<optgroup label="Educational">
+								<option value="Discovery">Discovery</option>
+								<option value="History">History</option>
+								<option value="OWN">OWN</option>
+								<option value="Oxygen">Oxygen</option>
+								<option value="TLC">TLC</option>
+							</optgroup>
+							<optgroup label="Movie">
+								<option value="Cinemax">Cinemax</option>
+								<option value="HBO">HBO</option>
+								<option value="Showtime">Showtime</option>
+								<option value="Starz">Starz</option>
+							</optgroup>
+								<optgroup label="Entertainment">
+								<option value="BET">BET</option>
+								<option value="MTV">MTV</option>
+								<option value="VH1">VH1</option>
+							</optgroup>
+							<option value="Misc">Misc</option>						
+						</select>	
+					</fieldset>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>Show Day(s):<font color="#FFD175">*</font></legend>									
+						<input type="checkbox" value="Sunday" id="sunday" name="showday" class="required" /><label for="sunday">Sunday</label>
+						<input type="checkbox" value="Monday" id="monday" name="showday" /><label for="monday">Monday</label>
+						<input type="checkbox" value="Tuesday" id="tuesday" name="showday" /><label for="tuesday">Tuesday</label>
+						<input type="checkbox" value="Wednesday" id="wednesday" name="showday" /><label for="wednesday">Wednesday</label>
+						<input type="checkbox" value="Thursday" id="thursday" name="showday" /><label for="thursday">Thursday</label>
+						<input type="checkbox" value="Friday" id="friday" name="showday" /><label for="friday">Friday</label>
+						<input type="checkbox" value="Saturday" id="saturday" name="showday" /><label for="saturday">Saturday</label>								
+					</fieldset>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="rating">On a Scale of 1 to 10 this show is:</label>						
+					<input type="range" min="1" max="10" name="rating" id="rating" value="5" />
+				</div>
+				<div data-role="fieldcontain">
+					<label for="comments">Comments about this show:</label>						
+					<textarea name="comments" id="comments"></textarea>
+				</div>				
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup" data-type="horizontal">		
+						<input type="submit" value="Add TV Show" id="submit" data-theme="b" />
+						<input type="reset" value="Reset / Clear Form" data-theme="a" />
+					</fieldset>
+				</div>
+				
+			</form>
+			<!--   This is orignal code from previous projects
+			<nav>	
+				<a href="#" id="clear">Clear Stored Data</a>
+				<a href="#" id="displayData">Display Data</a>
+				<a href="#home">Home</a>
+				<a href="#additem" style= "display:none;">Add Another Show</a>
+			</nav>
+			-->
+		</div>
+		<div data-role="footer" data-id="home" data-position="fixed">
+			<p align="center">A great TV guide!</p>			
+		</div>
+	</div>
+	
+	
+	<!-- New Page for Under Construction  -->
+	<div data-role="page" id="construction" data-add-back-btn="true" data-title="Coming Soon">
+		<div data-role="header" data-theme="a">
+			<h1><img src="images/mustSeeTv.png" id="hdrImg" align="center"/></h1>
+			<div>
+				<h2><a href="#additem" data-ajax="false">
+						<center><img src="images/cta.png" id="cta" /></center>
+					</a>
+				</h2>
+			</div> 
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>					
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" data-theme="c" id="constrcontent">
+			<h3>Show details is coming soon!</h3>					
+		</div>
+		<div data-role="footer" data-id="home" data-position="fixed">
+			<p align="center">A great TV guide!</p>
+		</div>	
+	</div>		
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/libs/additional-methods.min.js"></script>
+	<script src="js/json.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
