@@ -1,0 +1,33 @@
+/*
+Rashad Muhammad
+Project 3
+MiU - 1202
+*/
+
+
+
+
+label.error {
+	display: block;
+	margin: 10px 0px;
+	font: bold;
+	color:	#FFD175;
+	/*border: 1px solid #FFD175; */
+}
+#sferrorslink{
+	display: none;
+}
+/*
+input.error {
+	border: 1px solid red;
+}
+a#ui-btn ui-btn-icon-right ui-corner-top ui-corner-bottom ui-controlgroup-last ui-btn-up-a.error{
+	border: 1px solid red;
+}
+*/
+input:focus {
+	background-color: #FFD175;
+}
+
+
+
