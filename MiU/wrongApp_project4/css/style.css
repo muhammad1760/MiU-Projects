@@ -1,0 +1,74 @@
+/*
+Rashad Muhammad
+Project 4 - Wrong App
+MiU - 1202
+*/
+
+
+
+
+label.error {
+	display: block;
+	margin: 10px 0px;
+	font: bold;
+	color:	#FFD175;
+	/*border: 1px solid #FFD175; */
+}
+
+#content {
+	color: white;
+	font-weight: bold;
+	background-image: url(../images/wrongApp2.jpg); 
+}
+#showsForm {	
+	color: white;
+}
+h2 {
+	background-color: #00cc00;
+	margin: 0 0;
+	padding: 0 0;
+}
+small {
+	color: gray;
+	
+}
+/* this is the submit button
+span.ui-btn-inner.ui-corner-left {
+	background-color: #235d79;
+} */
+/* this is the TV Show text input field */
+input#showname.required.ui-input-text.ui-body-a.ui-corner-all.ui-shadow-inset{
+	color: #034769;
+	background-color: #00cc00;
+	border: 1px solid #235d79;
+}
+/* this is the Entry Date text input field */
+input#showdate.required.ui-input-text.ui-body-a.ui-corner-all.ui-shadow-inset{
+	color: #034769;
+	background-color: #00cc00;
+	border: 1px solid #235d79;
+}
+/* this is the Show Time text input field */
+input#starttime.required.ui-input-text.ui-body-a.ui-corner-all.ui-shadow-inset{
+	color: #034769;
+	background-color: #00cc00;
+	border: 1px solid #235d79;
+}
+/* this is the Comments textarea field */
+textarea#comments.ui-input-text.ui-body-a.ui-corner-all.ui-shadow-inset{
+	color: #034769;
+	background-color: #00cc00;
+	border: 1px solid #235d79;
+}
+/* this is the Rating text input field */
+input#rating.ui-slider-input.ui-input-text.ui-body-a.ui-corner-all.ui-shadow-inset{
+	color: #034769;
+	background-color: #00cc00;
+	border: 1px solid #235d79;
+}
+input:focus {
+	background-color: #FFD175;
+}
+
+
+
