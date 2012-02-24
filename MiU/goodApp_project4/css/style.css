@@ -1,0 +1,65 @@
+/*
+Rashad Muhammad
+Project 4 - Good App
+MiU - 1202
+*/
+
+
+#content {
+	color: #034769;
+	font-weight: bold;
+	background-image: url(../images/goodApp14.jpg); 
+}
+h2 {
+	margin: 0px 0;	
+	background-color: #086fa1;
+}
+img#hdrImg{
+	position: absolute-left;
+	margin: 10px;
+	padding: 10px 5px;
+}
+#showsForm {	
+	color: #034769;
+}
+/* this is the TV Show text input field */
+input#showname.required.ui-input-text.ui-body-a.ui-corner-all.ui-shadow-inset{
+	color: #034769;
+	background-color: white;
+	border: 1px solid #235d79;
+}
+/* this is the Entry Date text input field */
+input#showdate.required.ui-input-text.ui-body-a.ui-corner-all.ui-shadow-inset{
+	color: #034769;
+	background-color: white;
+	border: 1px solid #235d79;
+}
+/* this is the Show Time text input field */
+input#starttime.required.ui-input-text.ui-body-a.ui-corner-all.ui-shadow-inset{
+	color: #034769;
+	background-color: white;
+	border: 1px solid #235d79;
+}
+/* this is for text input hints */
+small {
+	color: gray;	
+}
+/* this is the Comments textarea field */
+textarea#comments.ui-input-text.ui-body-a.ui-corner-all.ui-shadow-inset{
+	color: #034769;
+	background-color: white;
+	border: 1px solid #235d79;
+}
+/* this is the Rating text input field */
+input#rating.ui-slider-input.ui-input-text.ui-body-a.ui-corner-all.ui-shadow-inset{
+	color: #034769;
+	background-color: white;
+	border: 1px solid #235d79;
+}
+label.error {
+	display: block;
+	margin: 10px 0px;
+	font: bold;
+	color:	white;
+	background-color: #235d79;
+}
